@@ -1,0 +1,9 @@
+.product__section-container{
+    background-color: #FFC2BB;
+}
+.title__main{
+    text-align: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 26px;
+}

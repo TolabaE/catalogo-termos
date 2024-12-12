@@ -1,0 +1,17 @@
+.card_product{
+    background-color: antiquewhite;
+    padding: 10px;
+    margin: 15px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+
+.img_product-container img{
+    width: 220px;
+    height: 220px;
+}
+
+.info_product-container{
+    padding: 10px;
+}
