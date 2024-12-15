@@ -1,6 +1,23 @@
 .product__section-container{
-    background-color: #FFC2BB;
+    background-color: var(--pallet-three-color);
+    padding: 20px;
 }
+
+.product__cards-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.product__cards-container h1 {
+    text-align: center;
+}
+
+.product__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
 .title__main{
     text-align: center;
     justify-content: center;

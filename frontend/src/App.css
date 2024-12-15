@@ -5,7 +5,13 @@
   box-sizing: border-box;
 }
 
-
+:root{
+  --pallet-one-color:#D76483;
+  --pallet-two-color:#EF9CA4;
+  --pallet-three-color:#FFC2BB;
+  --pallet-four-color:#F6E5CB;
+  --pallet-five-color:#C3AAA5;
+}
 
 body{
   background: rgb(195,170,165);

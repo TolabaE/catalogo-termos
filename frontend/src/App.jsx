@@ -1,14 +1,14 @@
-import './App.css'
 import Home from './pages/home/Home';
-import Products from './pages/products/products';
+import './App.css'
+import Products from './pages/products/Products';
 
 function App() {
 
   return (
-    <div>
-      <Home/>                                                         
+    <>
+      <Home/>
       <Products/>
-    </div>
+    </>
   )
 }
 
