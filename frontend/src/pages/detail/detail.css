@@ -1,0 +1,31 @@
+.detail__container{
+    background-color: aliceblue;
+    padding: 20px;
+    margin: 30px 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.image__detail-container img{
+    height: 520px;
+    width: 550px;
+}
+
+.description__detail-container{
+    background-color: burlywood;
+    padding: 20px;
+    width: 40%;
+}
+
+.description__detail-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title__detail{
+    font-weight: 400;
+    color: #323232;
+}
