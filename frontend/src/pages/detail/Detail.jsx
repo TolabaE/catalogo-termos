@@ -1,9 +1,19 @@
+import { useEffect } from 'react';
 import './detail.css';
 import { Link } from "react-router";
-
+import termos from '../../utils/array';
 
 
 const Detail = () => {
+
+    const getAllProducts = () =>{
+        console.log(termos);
+    }
+
+    useEffect(() => {
+        getAllProducts()
+    }, []);
+
     return (
         <div className='detail__container-main'>
             <div>
@@ -11,7 +21,7 @@ const Detail = () => {
             </div>
             <div className='detail__container'>
                 <div className='image__detail-container'>
-                    <img src="https://stanley1913store.com/cdn/shop/products/LegendaryClassicBottle_1_1080x.png?v=1687972296" alt="" />
+                    <img src="https://stanley1913store.com/cdn/shop/products/LegendaryClassicBottle_1_1080x.png?v=1687972296" alt="" />                                                                         
                 </div>
                 <div className='description__detail-container'>
                     <h2 className='title__detail'>Titulo del producto</h2>
