@@ -8,7 +8,13 @@
     gap: 25px;
 }
 
-.image__detail-container img{
+.image__detail-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image__main-detail img{
     height: 520px;
     width: 550px;
 }
@@ -28,4 +34,22 @@
 .title__detail{
     font-weight: 400;
     color: #323232;
+}
+
+.image__list-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 8px;
+    border: 2px solid #323232;
+}
+
+.box__image-list{
+    width: 100px;
+    height: 100px;
+}
+
+.box__image-list img{
+    width: 100%;
+    height: 100%;
 }

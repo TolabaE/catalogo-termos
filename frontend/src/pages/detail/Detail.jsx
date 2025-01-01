@@ -1,18 +1,26 @@
-import { useEffect } from 'react';
+import { useEffect ,useState} from 'react';
 import './detail.css';
 import { Link } from "react-router";
-import termos from '../../utils/array';
+import termos from '../../utils/array';//lista de arreglo forkeado
+import { useParams } from 'react-router';
 
 
 const Detail = () => {
 
-    const getAllProducts = () =>{
-        console.log(termos);
-    }
+    const {id_card} = useParams()//recibo el id por parametro de acuerdo al id de la tarjeta seleccionada
+    const [product, setProduct] = useState({});
 
     useEffect(() => {
+        const getAllProducts = () =>{
+        const foundProduct = termos.find(item => item.id_producto === parseInt(id_card));
+        if(foundProduct){
+            setProduct(foundProduct)
+        }else{
+            console.log("producto no encontrado");
+        }
+    }
         getAllProducts()
-    }, []);
+    },[id_card,product]);
 
     return (
         <div className='detail__container-main'>
@@ -21,13 +29,24 @@ const Detail = () => {
             </div>
             <div className='detail__container'>
                 <div className='image__detail-container'>
-                    <img src="https://stanley1913store.com/cdn/shop/products/LegendaryClassicBottle_1_1080x.png?v=1687972296" alt="" />                                                                         
+                    <div className='image__main-detail'>
+                        <img src="https://stanley1913store.com/cdn/shop/products/LegendaryClassicBottle_1_1080x.png?v=1687972296" alt="" />                                                                         
+                    </div>
+                    <div className='image__list-container'>
+                        {
+                            product.lista_imagen?.map(img =>(
+                                <div className='box__image-list' key={img.id_img}>
+                                        <img src={img.image} alt={img.alt} />
+                                </div>
+                            ))
+                        }
+                    </div>
                 </div>
                 <div className='description__detail-container'>
-                    <h2 className='title__detail'>Titulo del producto</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque culpa in quidem enim. Nihil dolore voluptas natus fuga ut, nesciunt sed, voluptatum necessitatibus deleniti, quidem perspiciatis fugit suscipit ipsum a!</p>
-                    <b>precio: $450.000</b>
-                    <i>stock disponible</i>
+                    <h2 className='title__detail'>{product.nombre}</h2>
+                    <p> {product.detalle}</p>
+                    <b>{product.precio}</b>
+                    <i>stock disponible {product.stock}</i>
                     <div>Comprar</div>
                 </div>
             </div>

@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />}/>
-      <Route path='/producto/' element={<Detail/>} />
+      <Route path='/producto/:id_card' element={<Detail/>} />
     </Routes>
   </BrowserRouter>,
 )

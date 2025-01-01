@@ -1,6 +1,6 @@
 import './product.css'
 import Card from '../../components/card/Card';
-
+import termos from '../../utils/array';
 
 const Products = () => {
 
@@ -20,12 +20,18 @@ const Products = () => {
                 <div className='product__cards-container'>
                     <h1>Termos</h1>
                     <div className='product__list'>
-                        <Card/>
-                        <Card/>
-                        <Card/>
-                        <Card/>
-                        <Card/>
-                        <Card/> 
+                        {
+                            termos.map(item => (
+                                <Card key={item.id_producto}
+                                    imagen={item.lista_imagen[0]}
+                                    precio={item.precio}
+                                    nombre={item.nombre}
+                                    stock={item.stock}
+                                    id={item.id_producto}
+                                />
+                            ))
+                        }
+                        
                     </div>
                 </div>
             </main>
