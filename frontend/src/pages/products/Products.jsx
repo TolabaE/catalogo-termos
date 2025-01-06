@@ -31,7 +31,6 @@ const Products = () => {
                                 />
                             ))
                         }
-                        
                     </div>
                 </div>
             </main>

@@ -1,5 +1,5 @@
 .detail__container{
-    background-color: aliceblue;
+    background-color: var(--pallet-three-color);
     padding: 20px;
     margin: 30px 10%;
     display: flex;
@@ -20,7 +20,7 @@
 }
 
 .description__detail-container{
-    background-color: burlywood;
+    background-color:var(--pallet-two-color);
     padding: 20px;
     width: 40%;
 }
@@ -33,7 +33,7 @@
 
 .title__detail{
     font-weight: 400;
-    color: #323232;
+    color: #151515;
 }
 
 .image__list-container{
@@ -52,4 +52,19 @@
 .box__image-list img{
     width: 100%;
     height: 100%;
+}
+
+.btn-detail{
+    padding: 8px;
+    text-align: center;
+    background-color: var(--pallet-five-color);
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn-detail > a{
+    text-decoration: none;
+    color:#151515;
 }
